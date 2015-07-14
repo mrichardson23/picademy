@@ -17,7 +17,7 @@ GPIO.output(ALL, False)
 mode = "auto"
 
 # Set up PubNub
-pubnub = Pubnub(publish_key=credentials.PUBNUB_PUBLISH_KEY, subscribe_key=credentials.PUBNUB_SUBSCRIBE_KEY)
+pubnub = Pubnub(publish_key=credentials.PUBNUB_PUBLISH_KEY, subscribe_key=credentials.PUBNUB_SUBSCRIBE_KEY, uuid='LIGHT')
 
 def _callback(message, channel):
     if message['text'] == "RED":
